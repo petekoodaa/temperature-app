@@ -1,0 +1,25 @@
+{
+  "name": "temperature-app",
+  "version": "1.0.0",
+  "description": "Web app for displaying my temperature values",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlapinla/temperature-app.git"
+  },
+  "author": "Petteri Lapinlampi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlapinla/temperature-app/issues"
+  },
+  "homepage": "https://github.com/tlapinla/temperature-app#readme",
+  "dependencies": {
+    "express": "^4.15.5",
+    "moment": "^2.18.1",
+    "pg": "^7.3.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}

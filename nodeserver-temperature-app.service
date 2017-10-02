@@ -1,0 +1,14 @@
+[Unit]
+Description=Node.js temperature application service
+
+[Service]
+EnvironmentFile=/home/tlapinla/dev/temperature-app/environment
+ExecStart=/usr/bin/node /home/tlapinla/dev/temperature-app/index.js
+Restart=never
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nodejs-temperature-app
+User=tlapinla
+
+[Install]
+WantedBy=multi-user.target

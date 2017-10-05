@@ -15,9 +15,9 @@ var config = {
     title:{
       text:'Temperatures'
     },
-    hover: {
-      mode: 'x',
-      intersect: 'false'
+    tooltips: {
+      mode: 'index',
+      intersect: false
     },
     scales: {
       xAxes: [{

@@ -6,6 +6,7 @@ var config = {
       backgroundColor: 'rgba(240, 100, 100, 0.5)',
       borderColor: 'rgba(240, 100, 100, 1)',
       fill: false,
+      pointRadius: 0,
       data: dataset,
     }],
   },

@@ -4,8 +4,12 @@ html
     script(src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js")
   body
     div(style = "width:95%;")
-      canvas(id = "myChart")
-      script(type = 'text/javascript').                                               
-        var place = !{JSON.stringify(place)};
-        var dataset = !{JSON.stringify(dataset)};
-      script(src = "/static/app.js")
+      canvas(id = "lineChartFMI", height = "100")
+    div(style = "width:95%;")
+      canvas(id = "lineChartWarehouseFreezer", height = "40")
+    script(type = 'text/javascript').
+      var fmiLocation1 = !{JSON.stringify(fmiLocation1)};
+      var fmiDataset1 = !{JSON.stringify(fmiDataset1)};
+      var warehouseDataset = !{JSON.stringify(warehouseDataset)};
+      var warehouseFreezerDataset = !{JSON.stringify(warehouseFreezerDataset)};
+    script(src = "/static/app.js")

@@ -26,7 +26,7 @@ var lineChartConfigFMI = {
       text:'Temperature from FMI'
     },
     tooltips: {
-      mode: 'index',
+      mode: 'nearest',
       intersect: false
     },
     scales: {
@@ -97,8 +97,8 @@ var lineChartConfigWarehouseFreezer = {
 
 window.onload = function() {
   var ctx1 = document.getElementById("lineChartFMI").getContext("2d");
-  window.myLine = new Chart(ctx1, lineChartConfigFMI);
+  window.myLine1 = new Chart(ctx1, lineChartConfigFMI);
 
   var ctx2 = document.getElementById("lineChartWarehouseFreezer").getContext("2d");
-  window.myLine = new Chart(ctx2, lineChartConfigWarehouseFreezer);
+  window.myLine2 = new Chart(ctx2, lineChartConfigWarehouseFreezer);
 };

@@ -3,7 +3,7 @@ var lineChartConfigFMI = {
   data: {
     datasets: [
       {
-        label: fmiLocation1,
+        label: 'Kirkkonummi FMI',
         backgroundColor: 'rgba(240, 100, 100, 0.5)',
         borderColor: 'rgba(240, 100, 100, 1)',
         fill: false,
@@ -58,7 +58,7 @@ var lineChartConfigWarehouseFreezer = {
         borderColor: 'rgba(100, 240, 100, 1)',
         fill: false,
         pointRadius: 0,
-        data: warehouseFreezerDataset
+        data: freezerDataset
       }
     ]
   },
@@ -86,14 +86,13 @@ var lineChartConfigWarehouseFreezer = {
           labelString: 'Temperature [C]'
         },
         ticks: {
-          max: -18,
-          min: -24
+          max: -16,
+          min: -22
         }
       }]
     }
   }
 };
-
 
 window.onload = function() {
   var ctx1 = document.getElementById("lineChartFMI").getContext("2d");

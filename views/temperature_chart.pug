@@ -3,13 +3,50 @@ html
     title= title
     script(src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js")
   body
-    div(style = "width:95%;")
-      canvas(id = "lineChartFMI", height = "100")
-    div(style = "width:95%;")
-      canvas(id = "lineChartWarehouseFreezer", height = "40")
     script(type = 'text/javascript').
-      var fmiLocation1 = !{JSON.stringify(fmiLocation1)};
       var fmiDataset1 = !{JSON.stringify(fmiDataset1)};
       var warehouseDataset = !{JSON.stringify(warehouseDataset)};
-      var warehouseFreezerDataset = !{JSON.stringify(warehouseFreezerDataset)};
+      var freezerDataset = !{JSON.stringify(freezerDataset)};
     script(src = "/static/app.js")
+    
+    div(style = "float:right; width:10%;")
+      p Varasto:
+      table
+        tr
+          td Max:
+          td #{warehouseMax} &#8451;
+        tr
+          td Min:
+          td #{warehouseMin} &#8451;
+        tr
+          td Mean:
+          td #{warehouseMean} &#8451;
+      p Pakastin:
+      table
+        tr
+          td Max:
+          td #{freezerMax} &#8451;
+        tr
+          td Min:
+          td #{freezerMin} &#8451;
+        tr
+          td Mean:
+          td #{freezerMean} &#8451;
+      p Kirkkonummi (FMI):
+      table
+        tr
+          td Max:
+          td #{kirkkonummiMax} &#8451;
+        tr
+          td Min:
+          td #{kirkkonummiMin} &#8451;
+        tr
+          td Mean:
+          td #{kirkkonummiMean} &#8451;
+
+    div(style = "float:left; width:90%;")
+      canvas(id = "lineChartFMI", height = "100")
+    
+    div(style = "float:left; width:90%;")
+      canvas(id = "lineChartWarehouseFreezer", height = "40")
+
